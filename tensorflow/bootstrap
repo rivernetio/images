@@ -62,7 +62,8 @@ def getWorkerStr():
   return True, workerStr[:-1], taskIndex
 
 def execCommand(psStr, workerStr, taskIndex):
-  cmd = "%s --ps_hosts=%s --worker_hosts=%s --task_index=%d --job_name=%s"%(FLAGS.cmd, psStr, workerStr, taskIndex, FLAGS.role)
+  logPath = logdir + "/" + time.strftime('%Y-%m-%dT%H:%M:%S',time.localtime(time.time()))
+  cmd = "%s --log_dir=%s --ps_hosts=%s --worker_hosts=%s --task_index=%d --job_name=%s"%(FLAGS.cmd, logPath, psStr, workerStr, taskIndex, FLAGS.role)
   print("the cmd to start the job: " + cmd)
 
   path = "%s/%s/%d"%(logdir, FLAGS.role, taskIndex)
