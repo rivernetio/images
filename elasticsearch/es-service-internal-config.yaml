@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: es-config
+  namespace: sky-firmament
+data:
+  elasticsearch.yml: |-
+    cluster.name: ecp-es-cluster
+    node.name: NODE_NAME
+    node.master: true  
+    node.data: true  
+    network.host: 0.0.0.0  
+    transport.host: localhost
+    transport.tcp.port: 9300
+    http.port: 9200
+    discovery.zen.ping.unicast.hosts: ["12.12.12.12:10801"]  
+    discovery.zen.minimum_master_nodes: 1  
+    discovery.zen.ping_timeout: 3s
+  log4j2.properties: |-
+    status = error
+
+    appender.console.type = Console
+    appender.console.name = console
+    appender.console.layout.type = PatternLayout
+    appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] %marker%m%n
+
+    rootLogger.level = info
+    rootLogger.appenderRef.console.ref = console
