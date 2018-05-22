@@ -1,0 +1,11 @@
+STATUS | wrapper  | 2018/05/22 14:02:36 | --> Wrapper Started as Console
+STATUS | wrapper  | 2018/05/22 14:02:36 | Launching a JVM...
+ERROR  | wrapper  | 2018/05/22 14:02:36 | Unable to start JVM: No such file or directory (2)
+ERROR  | wrapper  | 2018/05/22 14:02:36 | JVM exited while loading the application.
+INFO   | jvm 1    | 2018/05/22 14:02:36 | wrapper  | Unable to start JVM: No such file or directory (2)
+STATUS | wrapper  | 2018/05/22 14:02:40 | Launching a JVM...
+ERROR  | wrapper  | 2018/05/22 14:02:40 | Unable to start JVM: No such file or directory (2)
+ERROR  | wrapper  | 2018/05/22 14:02:40 | JVM exited while loading the application.
+INFO   | jvm 2    | 2018/05/22 14:02:40 | wrapper  | Unable to start JVM: No such file or directory (2)
+STATUS | wrapper  | 2018/05/22 14:02:43 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2018/05/22 14:02:43 | <-- Wrapper Stopped
