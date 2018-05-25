@@ -3,12 +3,6 @@
 # Run the initdb, then start solr in the foreground
 set -e
 
-rm -rf /opt/solr/server/solr/configsets/_default/conf/managed-schema
-rm -rf /opt/solr/server/solr/configsets/_default/conf/solrconfig.xml
-
-cp /opt/tmp/managed-schema /opt/solr/server/solr/configsets/_default/conf/managed-schema
-cp /opt/tmp/solrconfig.xml /opt/solr/server/solr/configsets/_default/conf/solrconfig.xml
-
 if [[ "$VERBOSE" = "yes" ]]; then
     set -x
 fi
